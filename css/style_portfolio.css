@@ -1,0 +1,172 @@
+/* reset */
+* { margin: 0; padding: 0; font-family: 'Cafe24SsurroundAir';}
+a { text-decoration: none;}
+li { list-style-type: none;}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .logo {
+    margin-left: 22px;
+    padding: 10px;
+    color: #a8a8ff;
+}
+
+#header .logo h2 {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#header .menu {
+    text-align: center;
+}
+
+#header .menu li {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+#header .menu li a {
+    display: block;
+    height: 58px;
+    line-height: 58px;
+    color: #807aa2;
+}
+
+#header .menu li a:hover {
+    color: #7a7fce;
+    background-color: #F4EEFF;
+    border-radius: 10px;
+}
+
+/* 화면 크기가 줄었을때 메뉴대신 나오는 메뉴버튼 */
+#header .navbar_toggle {
+    display: none;
+    color: #807aa2;
+    position: absolute;
+    right: 32px;
+    font-size: 26px;
+    line-height: 58px;
+}
+
+/* secton */
+.section {
+    padding: 50px 0px;
+}
+
+/* 작품들 좌우로 배치 */
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* 박스 기본 설정 */
+.portfolio {
+    width: 470px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 텍스트 기본 설정 */
+.no2, .no3, .no6 {
+    text-align: left;
+}
+
+/* 제목 설정 */
+.portfolio .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 사용프로그램 설정 */
+.portfolio .program {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.icon {
+    font-size: 25px;
+    width: 25px;
+}
+
+.no1 video {
+    width: 450px;
+    text-align: center;
+}
+
+.no4 img {
+    height: 300px;
+}
+
+.no5 img {
+    height: 300px;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    background-color: #AFB4FF;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#footer p {
+    padding: 12px;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width:768px) {
+    #wrap {width: auto;}
+
+    #header {
+        flex-direction: column; align-items: flex-start;
+    }
+    #header .menu {
+        flex-direction: column; align-items: flex-start; width: 100%;
+    }
+    #header .menu .navbar_menu {
+        display: none; flex-direction: column; align-items: center; width: 100%;
+    }
+    #header .menu .navbar_menu li {
+        text-align: center; width: 100%;
+    }
+    #header .navbar_toggle {display: block;}
+    #header .navbar_menu.active {display: flex;}
+
+    /* 포트폴리오 세로 배열 조정 */
+    .no1 {order: 1;}
+    .no2 {order: 2;}
+    .no3 {order: 4;}
+    .no4 {order: 3;}
+    .no5 {order: 5;}
+    .no6 {order: 6;}
+
+    #footer .foot {
+        display: none;
+    }
+}

@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-2ExtraLight';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+/* reset */
+* { margin: 0; padding: 0; font-family: 'Cafe24SsurroundAir';}
+a { text-decoration: none;}
+li { list-style-type: none;}
+
+/* contain  */
+.contain {width: 1000px; margin-left: auto; margin-right: auto;}
+
+/* header */
+#header {
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .logo {
+    margin-left: 22px;
+    padding: 10px;
+    color: #a8a8ff;
+}
+
+#header .logo h2 {
+    display: inline-block;
+}
+
+#header .menu {
+    text-align: center;
+}
+
+#header .menu li {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+#header .menu li a {
+    display: block;
+    height: 58px;
+    line-height: 58px;
+    color: #807aa2;
+}
+
+#header .menu li a:hover {
+    color: #7a7fce;
+    background-color: #F4EEFF;
+    border-radius: 10px;
+}
+
+/* 화면 크기가 줄었을때 메뉴대신 나오는 메뉴버튼 */
+#header .navbar_toggle {
+    display: none;
+    color: #807aa2;
+    position: absolute;
+    right: 32px;
+    font-size: 26px;
+    line-height: 58px;
+}
+
+/*content*/
+.content {display: flex; justify-content: space-around; text-align: center; margin-top: 30px; }
+.content  h2 {display: block;}
+
+/*profile*/
+.profile { display: flex;}
+.profile img {width: 250px; border-radius: 8px;}
+.profile img:hover {opacity: 50%; border-radius: 8px;}
+
+/*information*/
+.information {margin-top: 20px;}
+.information h2 {margin-bottom: 15px; font-size: 22px;}
+.information h3 {margin-bottom: 5px; font-size: 19px;}
+.information div { margin-bottom: 10px;}
+
+hr {margin-top: 30px; margin-bottom: 20px; width: 80%; margin-left: auto; margin-right: auto; text-align: center;}
+
+/*skill*/
+.skill {text-align: center; display: flex;  justify-content: center;  margin-top: 20px;}
+.skill table td {padding-right: 15px;}
+.skill table td:nth-child(5) {padding-right: 0px;}
+.skill caption {font-weight: bold; margin-bottom: 5px; font-size: 18px;}
+.skill img {width: 80px;}
+.percent td {font-size: 12px;}
+
+/*introduce*/
+.introduce {font-family:'S-CoreDream-2ExtraLight' ; text-align: center; margin-top: 15px;}
+
+/*detail*/
+.detail {display: flex; justify-content: center;}
+.detail div {display: inline-block; text-align: center; margin-top: 10px; margin-left: 150px; vertical-align: top;}
+.detail div:nth-child(1) {margin-left: 0;}
+.detail h2 {margin-bottom: 5px;}
+.detail h4 {display: block; font-weight: normal;}
+.detail summary::marker{color: #E9E4FF; font-size: 10px;}
+.more {color: #BBBBBB;}
+
+/* mockup */
+#mockup img {width: 200px;}
+#mockup table {width: 80%; margin: auto; text-align: center;}
+#mockup table caption {font-weight: bold; margin-bottom: 10px; font-size: 18px;}
+
+/* footer */
+#footer {
+    width: 100%;
+    background-color: #AFB4FF;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#footer p {
+    padding: 12px;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width:768px) {
+    .contain {width: auto;}
+
+    #header {
+        flex-direction: column; align-items: flex-start;
+    }
+    #header .menu {
+        flex-direction: column; align-items: flex-start; width: 100%;
+    }
+    #header .menu .navbar_menu {
+        display: none; flex-direction: column; align-items: center; width: 100%;
+    }
+    #header .menu .navbar_menu li {
+        text-align: center; width: 100%;
+    }
+    #header .navbar_toggle {display: block;}
+    #header .navbar_menu.active {display: flex;}
+}

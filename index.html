@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 다온 포트폴리오 </title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js" defer></script>
+        <script src="https://kit.fontawesome.com/e1ea04bd24.js" crossorigin="anonymous"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+    </head>
+    <body>
+        <div id="warp">
+            <header id="header">
+                <div class="logo">
+                <iconify-icon inline icon="pepicons:moon-print" width="25"></iconify-icon>
+                <h2>DAON</h2>
+                </div>
+
+                <nav class="menu">
+                    <ul class="navbar_menu">
+                        <li><a href="#">홈</a></li>
+                        <li><a href="./index_profile.html">프로필</a></li>
+                        <li><a href="./index_portfolio.html">포트폴리오</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="navbar_toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </header>
+            <!-- //header -->
+            
+            <section id="banner">
+                <div class="slideList">
+                    <div class="slideImg">
+                        <img src="images/banner01.jpg" alt="배너_1">
+                    </div>
+                    <div class="slideImg">
+                        <img src="images/banner02.jpg" alt="배너_2">
+                    </div>
+                    <div class="slideImg">
+                        <img src="images/banner03.jpg" alt="배너_3">
+                    </div>
+                </div>
+            </section>
+            <!-- //banner -->
+            
+            <section id="contents">
+                <img src="images/contents.png" alt="명언">
+            </section>
+            <!-- //contents -->
+            
+            <section id="mockup">
+               <div class="best clearfix">
+                   <figure>
+                       <img src="images/01.jpg" alt="스마트워치">
+                       <figcaption> 스마트워치 </figcaption>
+                   </figure>
+                   <figure>
+                       <img src="images/02.jpg" alt="명함">
+                       <figcaption> 명함 </figcaption>
+                   </figure>
+                   <figure>
+                       <img src="images/03.jpg" alt="모션그래픽">
+                       <figcaption> 모션그래픽 </figcaption>
+                   </figure>
+               </div> 
+               <div class="best clearfix">
+                   <figure>
+                       <img src="images/04.jpg" alt="숏폼콘텐츠">
+                       <figcaption> 숏폼콘텐츠 </figcaption>
+                   </figure>
+                   <figure>
+                       <img src="images/05.jpg" alt="제품상세페이지">
+                       <figcaption> 제품상세페이지</figcaption>
+                   </figure>
+                   <figure>
+                       <img src="images/06.jpg" alt="폰케이스"> 
+                       <figcaption> 폰케이스 </figcaption>
+                   </figure>
+               </div> 
+               <div class="best clearfix">
+                   <figure>
+                       <img src="images/07.jpg" alt="앨범커버">
+                       <figcaption> 앨범커버 </figcaption>
+                   </figure>
+                   <figure>
+                       <img src="images/08.jpg" alt="웹사이트">
+                       <figcaption> 웹사이트 </figcaption>
+                   </figure>
+                   <figure>
+                       <img src="images/09.jpg" alt="유튜브">
+                       <figcaption>유튜브 컨텐츠</figcaption>
+                   </figure>
+               </div> 
+            </section> 
+            <!-- //mockup -->
+            
+            <footer id="footer">
+                <p class="copyright">Copyright @ 2022 염예빈. All Rights  Reserverd.</p>
+            </footer>
+            <!-- footer -->
+        </div>
+        <!-- warp -->
+        
+        <script src="script/jquery.min.js"></script>
+        <script src="script/custom.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            //네비게이션
+            $(".nav > ul > li").mouseover(function(){
+                $(this).find(".submenu").stop().slideDown(200);
+            });
+            $(".nav > ul > li").mouseout(function(){
+                $(this).find(".submenu").stop().slideUp(200);
+            });
+            
+            //이미지 슬라이드
+            var currentIndex = 0;
+            
+            setInterval(function(){
+                if(currentIndex < 2){
+                    currentIndex++;
+                } else{
+                    currentIndex = 0;
+                }
+                var slidePosition =currentIndex * (-1000)+"px";
+                $(".slideList").animate({ left:slidePosition },400);
+            },3000);
+        </script>
+    </body>
+</html>

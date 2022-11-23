@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; font-family: 'Cafe24SsurroundAir';}
+a {color: black; text-decoration: none;}
+li {list-style: none;}
+.clearfix::before, .clearfix::after {content: ''; display: block; clear: both;}
+
+/* warp */
+#warp {width: 1000px; margin: 0 auto;}
+
+/* header */
+#header {
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .logo {
+    padding: 10px;
+    color: #a8a8ff;
+}
+
+#header .logo h2 {
+    display: inline-block;
+}
+
+#header .menu {
+    text-align: center;
+}
+
+#header .menu li {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+#header .menu li a {
+    display: block;
+    height: 58px;
+    line-height: 58px;
+    color: #807aa2;
+}
+
+#header .menu li a:hover {
+    color: #7a7fce;
+    background-color: #F4EEFF;
+    border-radius: 10px;
+}
+
+/* 화면 크기가 줄었을때 메뉴대신 나오는 메뉴버튼 */
+#header .navbar_toggle {
+    display: none;
+    color: #807aa2;
+    position: absolute;
+    right: 32px;
+    font-size: 26px;
+    line-height: 58px;
+}
+
+/* banner */
+#banner {height: 390px; overflow: hidden; margin-top: 10px; border-radius: 20px;}
+#banner img {width: 100%; display: block;}
+
+/* slidList */
+.slideList {position: relative; width: 3000px; z-index: 50;}
+.slideList .slideImg {position: relative; width: 1000px; float: left;}
+
+/* contents */
+#contents {margin-top: 20px; height: 128px;}
+#contents img {width: 100%; border-radius: 10px;}
+
+/* mockup */
+#mockup {margin-top: 30px;}
+.best figure {float: left; width: 32%; margin-right: 2%; margin-bottom: 15px;}
+.best figure img {width: 100%}
+.best figure:last-child {margin-right: 0;}
+.best figcaption {text-align: center; font-size: 20px;}
+
+/* footer */
+#footer {
+    width: 100%;
+    background-color: #AFB4FF;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#footer p {
+    padding: 12px;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width:768px) {
+    #warp {width: auto;}
+
+    #header {
+        flex-direction: column; align-items: flex-start;
+    }
+    #header .menu {
+        flex-direction: column; align-items: flex-start; width: 100%;
+    }
+    #header .menu .navbar_menu {
+        display: none; flex-direction: column; align-items: center; width: 100%;
+    }
+    #header .menu .navbar_menu li {
+        text-align: center; width: 100%;
+    }
+    #header .navbar_toggle {display: block;}
+    #header .navbar_menu.active {display: flex;}
+}
